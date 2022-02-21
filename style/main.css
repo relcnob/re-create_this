@@ -1,20 +1,24 @@
 /* fonts */
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @font-face {
-  font-family: "Arial Round";
-  src: url("../fonts/ARLRDBD.ttf") format("truetype");
+  font-family: "ArialRoundBold";
+  src: url("../fonts/Arial-Rounded-MT-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ArialRound";
+  src: url("../fonts/Arial_Rounded_MT.ttf") format("truetype");
 }
 /* variables */
 :root {
   /* fonts */
-  --mainFont: Arial, Helvetica, sans-serif;
-  --subFont: Arial Round, helvetica, sans-serif;
+  --mainFont: "ArialRound";
+  --subFont: "ArialRoundBold";
   /* colors */
   --mainColor: #db524d;
   --mainColorLight: #df645f;
   --mainColorDark: #c54a45;
   --subColor: #541c1e;
-  --bodycopyColor: #785e60;
+  --bodycopyColor: #533e40;
   --underlineColor: #f59c99;
   --linkColor: #f59c99;
   --linkHoverColor: #f59c99;
@@ -65,7 +69,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 0.7rem var(--global-padding);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   align-items: center;
 }
 
@@ -112,17 +116,14 @@ h4 {
   width: 85%;
 }
 
-.timer-options {
-}
-
 .timer-opt {
   font-family: var(--subFont);
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   padding: 0.2rem;
 }
 
 .timer-counter p {
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: var(--subFont);
 }
 
@@ -154,6 +155,9 @@ h4 {
 }
 
 .task-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0.7rem 0;
 }
 
@@ -195,12 +199,15 @@ h4 {
 }
 
 .content h1,
-h2,
-h3 {
+h2 {
   margin: 1rem 0;
+  color: var(--subColor);
+}
+
+.content h1 {
+  font-size: 1.8rem;
 }
 
 .content h2 {
-  color: var(--subColor);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
