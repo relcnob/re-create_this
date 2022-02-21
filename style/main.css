@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Arial-round";
+  src: url("../fonts/ARLRDBD.ttf") format("truetype");
+}
+
+:root {
+  --mainFont: Arial, Helvetica, sans-serif;
+  --subFont: Arial Round, helvetica, sans-serif;
+  --mainColor: #db524d;
+  --mainColorLight: #df645f;
+  --subColor: #541c1e;
+  --bodycopyColor: #785e60;
+  --underlineColor: #f59c99;
+  --linkColor: #f59c99;
+  --linkHoverColor: #f59c99;
+  --bgColor: #fff;
+  --gray: #999999;
+  --grayDark: #a19192;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--mainFont);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--bodycopyColor);
+  font-family: var(--mainFont);
+  background-color: var(--bgColor);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--subFont);
+  color: var(--subColor);
+}
