@@ -1,23 +1,35 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @font-face {
-  font-family: "Arial-round";
-  src: url("../fonts/ARLRDBD.ttf") format("truetype");
+  font-family: "ArialRoundBold";
+  src: url("../fonts/Arial-Rounded-MT-Bold.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "ArialRound";
+  src: url("../fonts/Arial_Rounded_MT.ttf") format("truetype");
+}
+/* variables */
 :root {
-  --mainFont: Arial, Helvetica, sans-serif;
-  --subFont: Arial Round, helvetica, sans-serif;
+  /* fonts */
+  --mainFont: "ArialRound";
+  --subFont: "ArialRoundBold";
+  /* colors */
   --mainColor: #db524d;
   --mainColorLight: #df645f;
+  --mainColorDark: #c54a45;
   --subColor: #541c1e;
-  --bodycopyColor: #785e60;
+  --bodycopyColor: #533e40;
   --underlineColor: #f59c99;
   --linkColor: #f59c99;
   --linkHoverColor: #f59c99;
   --bgColor: #fff;
   --gray: #999999;
   --grayDark: #a19192;
+  /* paddings */
+  --global-padding: 0.8rem;
+  --article-padding: 2rem;
 }
-
+/* general styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,7 +51,163 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--subFont);
   color: var(--subColor);
+}
+
+header {
+  display: flex;
+  background-color: var(--mainColor);
+  color: #fff;
+  justify-content: space-between;
+  padding: var(--global-padding);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem var(--global-padding);
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+footer section {
+  padding: 0.3rem 0;
+}
+article {
+  padding: var(--global-padding);
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* class styling */
+
+.logo {
+  font-family: var(--subFont);
+  font-size: 1.3rem;
+}
+
+.timer-wrapper {
+  background-color: var(--mainColor);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-wrapper h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+.timer {
+  background-color: var(--mainColorLight);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem;
+  width: 85%;
+}
+
+.timer-opt {
+  font-family: var(--subFont);
+  font-size: 0.8rem;
+  padding: 0.2rem;
+}
+
+.timer-counter p {
+  font-size: 6rem;
+  font-family: var(--subFont);
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.tasks header {
+  padding: 1rem 0;
+  font-size: 0.7rem;
+}
+
+.task-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+.task {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #000;
+  background-color: #fff;
+}
+.task div {
+  display: flex;
+}
+
+.task-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+
+.task-add {
+  padding: 1rem 0;
+}
+.task-add span {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.7rem;
+  border: dashed 1.5px rgba(255, 255, 255, 0.4);
+}
+
+.task-info {
+  background-color: var(--mainColorLight);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.task-info span {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.task-info span p {
+  padding: 0.1rem;
+  font-size: 0.7rem;
+}
+
+.task-info span p:last-child {
+  font-size: 1rem;
+  font-family: var(--subFont);
+}
+
+.content h1,
+h2 {
+  margin: 1rem 0;
+  color: var(--subColor);
+}
+
+.content h1 {
+  font-size: 1.8rem;
+}
+
+.content h2 {
+  font-size: 1.4rem;
 }
