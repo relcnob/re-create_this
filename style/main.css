@@ -18,7 +18,7 @@
   --mainColorLight: #df645f;
   --mainColorDark: #c54a45;
   --subColor: #541c1e;
-  --bodycopyColor: #533e40;
+  --bodycopyColor: #967579;
   --underlineColor: #f59c99;
   --linkColor: #f59c99;
   --linkHoverColor: #f59c99;
@@ -372,12 +372,14 @@ h4 {
 .content p {
   color: var(--bodycopyColor);
   font-family: var(--mainFont);
+  font-size: 1rem;
 }
 
 .content h1,
 h2 {
   margin: 1rem 0;
   color: var(--subColor);
+  font-weight: bold;
 }
 
 .content h1 {
@@ -419,7 +421,8 @@ h2 {
 .content a {
   text-decoration: none;
   color: var(--mainColor);
-  font-family: var(--subFont);
+  font-family: var(--mainFont);
+  font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
 }
