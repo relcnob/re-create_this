@@ -76,6 +76,7 @@ footer {
 footer section {
   padding: 0.3rem 0;
 }
+
 article {
   padding: var(--global-padding);
 }
@@ -261,7 +262,7 @@ h4 {
 
 .active:before {
   content: "";
-  background-color: #000;
+  background-color: #1f1f1f;
   left: 0;
   height: 100%;
   width: 0.35rem;
@@ -424,5 +425,35 @@ h2 {
 }
 
 .content a:hover {
+  color: var(--linkColor);
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--grayDark);
+  font-size: 1rem;
+  font-family: var(--subFont);
+  padding: 0 0.2rem;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+.made-by {
+  font-size: 1rem;
+}
+
+.made-by a {
+  text-decoration: none;
+  color: var(--mainColor);
+  font-family: var(--subFont);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.made-by a:hover {
   color: var(--linkColor);
 }
