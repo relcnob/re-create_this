@@ -15,7 +15,7 @@
   --subFont: "ArialRoundBold";
   /* colors */
   --mainColor: #db524d;
-  --mainColorLight: #df645f;
+  --mainColorLight: #e1716d;
   --mainColorDark: #c54a45;
   --subColor: #541c1e;
   --bodycopyColor: #967579;
@@ -58,11 +58,55 @@ h4 {
 }
 
 header {
-  display: flex;
+  margin: auto;
   background-color: var(--mainColor);
+  width: 100%;
+}
+
+header section {
+  display: flex;
+  gap: 0.6rem;
+}
+
+header section a {
   color: #fff;
-  justify-content: space-between;
-  padding: var(--global-padding);
+  text-decoration: none;
+  font-family: var(--mainFont);
+  background: var(--mainColorLight);
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: 0.5s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+header section a:hover {
+  background-color: var(--mainColorDark);
+}
+
+.report:before {
+  display: inline-block;
+  content: url(../icons/report-icon.svg);
+  width: 16px;
+  margin-right: 0.3rem;
+}
+
+.setting:before {
+  display: inline-block;
+  content: url(../icons/setting-icon.svg);
+  width: 16px;
+  height: 16px;
+  margin-right: 0.3rem;
+}
+
+.login:before {
+  display: inline-block;
+  content: url(../icons/login-icon.svg);
+  width: 16px;
+  height: 16px;
+  margin-right: 0.3rem;
 }
 
 footer {
@@ -86,10 +130,30 @@ p {
 }
 
 /* class styling */
+.header-wrapper {
+  max-width: 768px;
+  display: flex;
+  background-color: var(--mainColor);
+  color: #fff;
+  justify-content: space-between;
+  padding: var(--global-padding);
+  margin: auto;
+  border-bottom: solid 1px var(--mainColorDark);
+}
 
 .logo {
   font-family: var(--subFont);
   font-size: 1.3rem;
+  position: relative;
+  display: flex;
+}
+
+.logo:before {
+  content: url(../icons/checkmark-white.svg);
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-right: 0.4rem;
 }
 
 .timer-wrapper {
@@ -123,6 +187,13 @@ h4 {
   font-family: var(--subFont);
   font-size: 0.8rem;
   padding: 0.2rem 0.7rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.timer-opt:hover {
+  background-color: var(--mainColor);
+  border-radius: 0.2rem;
 }
 
 .opt-active {
@@ -374,6 +445,10 @@ h4 {
 .content {
   max-width: 768px;
   margin: auto;
+}
+
+.content section {
+  margin-bottom: 2.5rem;
 }
 
 .content p {
