@@ -368,6 +368,11 @@ h4 {
   font-family: var(--subFont);
 }
 
+.content p {
+  color: var(--bodycopyColor);
+  font-family: var(--mainFont);
+}
+
 .content h1,
 h2 {
   margin: 1rem 0;
@@ -380,4 +385,44 @@ h2 {
 
 .content h2 {
   font-size: 1.4rem;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+.content h2:after {
+  content: "";
+  width: 1.2rem;
+  height: 3px;
+  display: block;
+  background-color: var(--linkColor);
+  position: absolute;
+  bottom: -0.7rem;
+}
+.content li {
+  font-family: var(--mainFont);
+  margin-bottom: 0.8rem;
+}
+
+.content ul li {
+  list-style: none;
+}
+
+.content ul li:before {
+  content: "\2022";
+  display: inline-block;
+  font-weight: bold;
+  color: var(--mainColor);
+  margin-left: -1rem;
+  width: 1rem;
+}
+
+.content a {
+  text-decoration: none;
+  color: var(--mainColor);
+  font-family: var(--subFont);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.content a:hover {
+  color: var(--linkColor);
 }
