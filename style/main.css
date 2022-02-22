@@ -112,8 +112,9 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   width: 85%;
+  border-radius: 0.2rem;
 }
 
 .timer-opt {
@@ -221,6 +222,7 @@ h4 {
 
 .task div {
   display: flex;
+  align-items: center;
 }
 
 .task div p {
@@ -231,14 +233,14 @@ h4 {
 
 .task div span {
   aspect-ratio: 1/1;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.done div p {
+.done div:first-of-type p {
   color: var(--gray);
   text-decoration: line-through;
   text-decoration-thickness: 2px;
@@ -267,6 +269,16 @@ h4 {
   top: 0;
 }
 
+.active div:first-of-type span {
+  content: url(../icons/checkmark-colored.svg);
+  height: 24px;
+}
+
+.done div:first-of-type span {
+  content: url(../icons/checkmark-gray.svg);
+  height: 24px;
+}
+
 .task-current {
   display: flex;
   flex-direction: column;
@@ -292,7 +304,7 @@ h4 {
 }
 .task-add span {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -336,7 +348,7 @@ h4 {
   flex-direction: row;
   justify-content: center;
   margin: 1rem 0 5rem 0;
-  border-top: 1px solid rgb(189, 187, 187);
+  border-top: 1px solid #fff;
 }
 .task-info span {
   display: flex;
