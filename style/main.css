@@ -18,7 +18,7 @@
   --mainColorLight: #df645f;
   --mainColorDark: #c54a45;
   --subColor: #541c1e;
-  --bodycopyColor: #533e40;
+  --bodycopyColor: #967579;
   --underlineColor: #f59c99;
   --linkColor: #f59c99;
   --linkHoverColor: #f59c99;
@@ -76,6 +76,7 @@ footer {
 footer section {
   padding: 0.3rem 0;
 }
+
 article {
   padding: var(--global-padding);
 }
@@ -115,6 +116,7 @@ h4 {
   padding: 1rem 1rem 2rem 1rem;
   width: 85%;
   border-radius: 0.2rem;
+  max-width: 768px;
 }
 
 .timer-opt {
@@ -188,6 +190,7 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 85%;
+  max-width: 768px;
 }
 .tasks header {
   padding: 1rem 0;
@@ -261,7 +264,7 @@ h4 {
 
 .active:before {
   content: "";
-  background-color: #000;
+  background-color: #1f1f1f;
   left: 0;
   height: 100%;
   width: 0.35rem;
@@ -368,10 +371,22 @@ h4 {
   font-family: var(--subFont);
 }
 
+.content {
+  max-width: 768px;
+  margin: auto;
+}
+
+.content p {
+  color: var(--bodycopyColor);
+  font-family: var(--mainFont);
+  font-size: 1rem;
+}
+
 .content h1,
 h2 {
   margin: 1rem 0;
   color: var(--subColor);
+  font-weight: bold;
 }
 
 .content h1 {
@@ -380,4 +395,84 @@ h2 {
 
 .content h2 {
   font-size: 1.4rem;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+.content h2:after {
+  content: "";
+  width: 1.2rem;
+  height: 3px;
+  display: block;
+  background-color: var(--linkColor);
+  position: absolute;
+  bottom: -0.7rem;
+}
+.content li {
+  font-family: var(--mainFont);
+  margin-bottom: 0.8rem;
+}
+
+.content ul li {
+  list-style: none;
+}
+
+.content ul li:before {
+  content: "\2022";
+  display: inline-block;
+  font-weight: bold;
+  color: var(--mainColor);
+  margin-left: -1rem;
+  width: 1rem;
+}
+
+.content ul li span {
+  margin: 0;
+  padding: 0;
+}
+.content a {
+  text-decoration: none;
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.content a:hover {
+  color: var(--linkColor);
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--grayDark);
+  font-size: 1rem;
+  font-family: var(--subFont);
+  padding: 0 0.2rem;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gray);
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+.made-by {
+  font-size: 1rem;
+}
+
+.made-by a {
+  text-decoration: none;
+  color: var(--mainColor);
+  font-family: var(--subFont);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.made-by a:hover {
+  color: var(--linkColor);
 }
