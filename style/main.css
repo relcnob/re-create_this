@@ -127,6 +127,57 @@ h4 {
   font-family: var(--subFont);
 }
 
+.btn {
+  margin: 0;
+  border: 0;
+  background-color: #fff;
+  color: var(--mainColor);
+  font-size: 1.5rem;
+  padding: 0.7rem 4rem;
+  font-family: var(--subFont);
+  border-radius: 0.4rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.btn-wrapper:after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: #e4e4e4;
+  width: 100%;
+  height: 0.7rem;
+  left: 0;
+  bottom: -0.35rem;
+  z-index: 1;
+  border-radius: 0px 0px 0.4rem 0.4rem;
+  transition: 0.5s ease;
+}
+
+.btn-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn-wrapper:hover {
+  transform: translateY(0.35rem);
+}
+
+.btn-wrapper:hover:after {
+  transform: translateY(-0.35rem);
+}
+
+.btn-wrapper:hover .btn {
+  background-color: #f1f1f1;
+}
+
 .tasks {
   display: flex;
   flex-direction: column;
