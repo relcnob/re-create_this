@@ -115,6 +115,7 @@ footer {
   padding: 0.7rem var(--global-padding);
   font-size: 0.8rem;
   align-items: center;
+  border-top: solid 1px var(--gray);
 }
 
 footer section {
@@ -579,6 +580,16 @@ h2 {
 
 .made-by a:hover {
   color: var(--linkColor);
+}
+
+.socials a img {
+  width: 32px;
+  margin: 0 0.5rem;
+  transition: 0.3s ease;
+}
+
+.socials a img:hover {
+  opacity: 0.5;
 }
 
 @media only screen and (min-width: 768px) {
