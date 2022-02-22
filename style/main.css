@@ -116,6 +116,7 @@ h4 {
   padding: 1rem 1rem 2rem 1rem;
   width: 85%;
   border-radius: 0.2rem;
+  max-width: 768px;
 }
 
 .timer-opt {
@@ -189,6 +190,7 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 85%;
+  max-width: 768px;
 }
 .tasks header {
   padding: 1rem 0;
@@ -369,6 +371,11 @@ h4 {
   font-family: var(--subFont);
 }
 
+.content {
+  max-width: 768px;
+  margin: auto;
+}
+
 .content p {
   color: var(--bodycopyColor);
   font-family: var(--mainFont);
@@ -418,6 +425,10 @@ h2 {
   width: 1rem;
 }
 
+.content ul li span {
+  margin: 0;
+  padding: 0;
+}
 .content a {
   text-decoration: none;
   color: var(--mainColor);
@@ -438,6 +449,11 @@ h2 {
   font-family: var(--subFont);
   padding: 0 0.2rem;
   font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gray);
 }
 
 .copyright {
